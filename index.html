@@ -3,63 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generator danych</title>
+    <title>Formularz Danych</title>
 </head>
 <body>
-    <h1>Generator danych</h1>
-    <form id="dataForm">
-        <label>Imię: <input type="text" id="imie"></label><br>
-        <label>Nazwisko: <input type="text" id="nazwisko"></label><br>
-        <label>Obywatelstwo: <input type="text" id="obywatelstwo"></label><br>
-        <label>Data urodzenia: <input type="date" id="dataUrodzenia"></label><br>
-        <label>Numer PESEL: <input type="text" id="pesel"></label><br>
-        <label>Nazwisko rodowe: <input type="text" id="nazwiskoRodowe"></label><br>
-        <label>Płeć: <input type="text" id="plec"></label><br>
-        <label>Nazwisko rodowe ojca: <input type="text" id="nazwiskoOjca"></label><br>
-        <label>Nazwisko rodowe matki: <input type="text" id="nazwiskoMatki"></label><br>
-        <label>Miejsce urodzenia: <input type="text" id="miejsceUrodzenia"></label><br>
-        <label>Adres zameldowania: <input type="text" id="adres"></label><br>
-        <label>Data zameldowania: <input type="date" id="dataZameldowania"></label><br>
-        <label>Seria i numer: <input type="text" id="seriaNumer"></label><br>
-        <label>Organ wydający: <input type="text" id="organWydajacy"></label><br>
-        <label>Termin ważności: <input type="date" id="terminWaznosci"></label><br>
-        <label>Data wydania: <input type="date" id="dataWydania"></label><br>
-        <label>Imię ojca: <input type="text" id="imieOjca"></label><br>
-        <label>Imię matki: <input type="text" id="imieMatki"></label><br>
-        <button type="button" id="generateBtn">Generuj</button>
+    <h2>Wprowadź swoje dane</h2>
+
+    <!-- Formularz z polami do wypełnienia -->
+    <form id="daneForm">
+        <label for="imie">Imię (Imiona):</label><br>
+        <input type="text" id="imie" name="imie"><br><br>
+
+        <label for="nazwisko">Nazwisko:</label><br>
+        <input type="text" id="nazwisko" name="nazwisko"><br><br>
+
+        <label for="obywatelstwo">Obywatelstwo:</label><br>
+        <input type="text" id="obywatelstwo" name="obywatelstwo"><br><br>
+
+        <label for="dataUrodzenia">Data urodzenia:</label><br>
+        <input type="date" id="dataUrodzenia" name="dataUrodzenia"><br><br>
+
+        <label for="pesel">Numer PESEL:</label><br>
+        <input type="text" id="pesel" name="pesel"><br><br>
+
+        <input type="submit" value="Zapisz dane">
     </form>
 
     <script>
-        document.getElementById("generateBtn").addEventListener("click", () => {
-            // Pobieranie danych z formularza
-            const formData = {
-                imie: document.getElementById("imie").value || "BRAK",
-                nazwisko: document.getElementById("nazwisko").value || "BRAK",
-                obywatelstwo: document.getElementById("obywatelstwo").value || "BRAK",
-                dataUrodzenia: document.getElementById("dataUrodzenia").value || "BRAK",
-                pesel: document.getElementById("pesel").value || "BRAK",
-                nazwiskoRodowe: document.getElementById("nazwiskoRodowe").value || "BRAK",
-                plec: document.getElementById("plec").value || "BRAK",
-                nazwiskoOjca: document.getElementById("nazwiskoOjca").value || "BRAK",
-                nazwiskoMatki: document.getElementById("nazwiskoMatki").value || "BRAK",
-                miejsceUrodzenia: document.getElementById("miejsceUrodzenia").value || "BRAK",
-                adres: document.getElementById("adres").value || "BRAK",
-                dataZameldowania: document.getElementById("dataZameldowania").value || "BRAK",
-                seriaNumer: document.getElementById("seriaNumer").value || "BRAK",
-                organWydajacy: document.getElementById("organWydajacy").value || "BRAK",
-                terminWaznosci: document.getElementById("terminWaznosci").value || "BRAK",
-                dataWydania: document.getElementById("dataWydania").value || "BRAK",
-                imieOjca: document.getElementById("imieOjca").value || "BRAK",
-                imieMatki: document.getElementById("imieMatki").value || "BRAK",
-                lastUpdate: new Date().toLocaleDateString("pl-PL")
-            };
+        // Obsługa formularza
+        document.getElementById("daneForm").onsubmit = function(event) {
+            event.preventDefault(); // Zatrzymuje domyślną akcję formularza
 
-            // Zapis danych w localStorage
-            localStorage.setItem("formData", JSON.stringify(formData));
+            // Pobranie danych z formularza
+            const imie = document.getElementById("imie").value;
+            const nazwisko = document.getElementById("nazwisko").value;
+            const obywatelstwo = document.getElementById("obywatelstwo").value;
+            const dataUrodzenia = document.getElementById("dataUrodzenia").value;
+            const pesel = document.getElementById("pesel").value;
 
-            // Przekierowanie na stronę wyświetlającą dane
-            window.location.href = "id.html";
-        });
+            // Zapisanie danych do localStorage
+            localStorage.setItem('imie', imie);
+            localStorage.setItem('nazwisko', nazwisko);
+            localStorage.setItem('obywatelstwo', obywatelstwo);
+            localStorage.setItem('dataUrodzenia', dataUrodzenia);
+            localStorage.setItem('pesel', pesel);
+
+            // Przekierowanie na stronę index2.html
+            window.location.href = "index2.html";
+        };
     </script>
 </body>
 </html>
