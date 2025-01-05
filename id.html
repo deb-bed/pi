@@ -262,6 +262,14 @@
         <p><strong id="pesel"></strong></p>
         <p class="sub">Numer PESEL</p><br>
     </section>
+         <script>
+        // Odczytanie danych z localStorage
+        document.getElementById("imie").textContent = localStorage.getItem('imie');
+        document.getElementById("nazwisko").textContent = localStorage.getItem('nazwisko');
+        document.getElementById("obywatelstwo").textContent = localStorage.getItem('obywatelstwo');
+        document.getElementById("dataUrodzenia").textContent = localStorage.getItem('dataUrodzenia');
+        document.getElementById("pesel").textContent = localStorage.getItem('pesel');
+    </script>
     </main>
   <section id="bottom">
         <img src="https://ib05lvtzg55be6a6c6kpg3.ct8.pl/apka-3-0/dowod_files/checkmark.svg" alt="checkmark">
@@ -518,35 +526,6 @@
             blueSection.style.display = 'none';
         });
   </script>
-
- <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const data = JSON.parse(localStorage.getItem("formData")) || {};
-
-            document.getElementById("imie").innerHTML = `<strong>${data.imie || "BRAK"}</strong>`;
-            document.getElementById("nazwisko").innerHTML = `<strong>${data.nazwisko || "BRAK"}</strong>`;
-            document.getElementById("obywatelstwo").innerHTML = `<strong>${data.obywatelstwo || "BRAK"}</strong>`;
-            document.getElementById("dataUrodzenia").innerHTML = `<strong>${data.dataUrodzenia || "BRAK"}</strong>`;
-            document.getElementById("pesel").innerHTML = `<strong>${data.pesel || "BRAK"}</strong>`;
-            document.getElementById("nazwiskoRodowe").innerHTML = `<strong>${data.nazwiskoRodowe || "BRAK"}</strong>`;
-            document.getElementById("plec").innerHTML = `<strong>${data.plec || "BRAK"}</strong>`;
-            document.getElementById("nazwiskoOjca").innerHTML = `<strong>${data.nazwiskoOjca || "BRAK"}</strong>`;
-            document.getElementById("nazwiskoMatki").innerHTML = `<strong>${data.nazwiskoMatki || "BRAK"}</strong>`;
-            document.getElementById("miejsceUrodzenia").innerHTML = `<strong>${data.miejsceUrodzenia || "BRAK"}</strong>`;
-            document.getElementById("adres").innerHTML = `<strong>${data.adres || "BRAK"}</strong>`;
-            document.getElementById("dataZameldowania").innerHTML = `<strong>${data.dataZameldowania || "BRAK"}</strong>`;
-            document.getElementById("seriaNumer").innerHTML = `<strong>${data.seriaNumer || "BRAK"}</strong>`;
-            document.getElementById("organWydajacy").innerHTML = `<strong>${data.organWydajacy || "BRAK"}</strong>`;
-            document.getElementById("terminWaznosci").innerHTML = `<strong>${data.terminWaznosci || "BRAK"}</strong>`;
-            document.getElementById("dataWydania").innerHTML = `<strong>${data.dataWydania || "BRAK"}</strong>`;
-            document.getElementById("imieOjca").innerHTML = `<strong>${data.imieOjca || "BRAK"}</strong>`;
-            document.getElementById("imieMatki").innerHTML = `<strong>${data.imieMatki || "BRAK"}</strong>`;
-
-            // Wczytywanie ostatniej aktualizacji
-            const lastUpdate = data.lastUpdate || "00.00.0000";
-            document.getElementById("sukadziwkakurwa").innerHTML = `<strong>${lastUpdate}</strong>`;
-        });
-    </script>
     
 </body>
 </html>
