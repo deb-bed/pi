@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator danych</title>
+    <script>
+        function generuj() {
+            const formData = {
+                imie: document.getElementById("imie").value,
+                nazwisko: document.getElementById("nazwisko").value,
+                obywatelstwo: document.getElementById("obywatelstwo").value,
+                dataUrodzenia: document.getElementById("dataUrodzenia").value,
+                pesel: document.getElementById("pesel").value,
+                nazwiskoRodowe: document.getElementById("nazwiskoRodowe").value,
+                plec: document.getElementById("plec").value,
+                nazwiskoOjca: document.getElementById("nazwiskoOjca").value,
+                nazwiskoMatki: document.getElementById("nazwiskoMatki").value,
+                miejsceUrodzenia: document.getElementById("miejsceUrodzenia").value,
+                adres: document.getElementById("adres").value,
+                dataZameldowania: document.getElementById("dataZameldowania").value,
+                seriaNumer: document.getElementById("seriaNumer").value,
+                organWydajacy: document.getElementById("organWydajacy").value,
+                terminWaznosci: document.getElementById("terminWaznosci").value,
+                dataWydania: document.getElementById("dataWydania").value,
+                imieOjca: document.getElementById("imieOjca").value,
+                imieMatki: document.getElementById("imieMatki").value
+            };
+
+            localStorage.setItem("formData", JSON.stringify(formData));
+            window.location.href = "id.html";
+        }
+    </script>
+</head>
+<body>
+    <h1>Generator danych</h1>
+    <form onsubmit="event.preventDefault(); generuj();">
+        <label>Imię: <input type="text" id="imie" required></label><br>
+        <label>Nazwisko: <input type="text" id="nazwisko" required></label><br>
+        <label>Obywatelstwo: <input type="text" id="obywatelstwo" required></label><br>
+        <label>Data urodzenia: <input type="date" id="dataUrodzenia" required></label><br>
+        <label>PESEL: <input type="text" id="pesel" required></label><br>
+        <label>Nazwisko rodowe: <input type="text" id="nazwiskoRodowe"></label><br>
+        <label>Płeć: <input type="text" id="plec"></label><br>
+        <label>Nazwisko ojca: <input type="text" id="nazwiskoOjca"></label><br>
+        <label>Nazwisko matki: <input type="text" id="nazwiskoMatki"></label><br>
+        <label>Miejsce urodzenia: <input type="text" id="miejsceUrodzenia"></label><br>
+        <label>Adres zameldowania: <input type="text" id="adres"></label><br>
+        <label>Data zameldowania: <input type="date" id="dataZameldowania"></label><br>
+        <label>Seria i numer: <input type="text" id="seriaNumer"></label><br>
+        <label>Organ wydający: <input type="text" id="organWydajacy"></label><br>
+        <label>Termin ważności: <input type="date" id="terminWaznosci"></label><br>
+        <label>Data wydania: <input type="date" id="dataWydania"></label><br>
+        <label>Imię ojca: <input type="text" id="imieOjca"></label><br>
+        <label>Imię matki: <input type="text" id="imieMatki"></label><br>
+        <button type="submit">Generuj</button>
+    </form>
+</body>
+</html>
