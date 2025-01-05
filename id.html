@@ -250,14 +250,18 @@
                 <p>Rzeczpospolita<br>Polska</p>
             </div>
         </section>
-        <section id="praw">
-            <p><strong></strong> BRAK</p>            <p class="sub">Imię (Imiona)</p><br>
-            <p><strong></strong> BRAK </p>            <p class="sub">Nazwiskо</p><br>
-            <p>BRAK</p>
-            <p class="sub">Obywatelstwo</p><br>
-            <p><strong></strong> BRAK</p>            <p class="sub">Data urodzenia</p><br>
-            <p><strong></strong> BRAK</p>            <p class="sub">Numer PЕSEL</p><br>
-        </section>
+       <section id="praw">
+        <p><strong id="imie"></strong></p>
+        <p class="sub">Imię (Imiona)</p><br>
+        <p><strong id="nazwisko"></strong></p>
+        <p class="sub">Nazwisko</p><br>
+        <p><strong id="obywatelstwo"></strong></p>
+        <p class="sub">Obywatelstwo</p><br>
+        <p><strong id="dataUrodzenia"></strong></p>
+        <p class="sub">Data urodzenia</p><br>
+        <p><strong id="pesel"></strong></p>
+        <p class="sub">Numer PESEL</p><br>
+    </section>
     </main>
   <section id="bottom">
         <img src="https://ib05lvtzg55be6a6c6kpg3.ct8.pl/apka-3-0/dowod_files/checkmark.svg" alt="checkmark">
@@ -283,37 +287,43 @@
 
         <img src="https://ib05lvtzg55be6a6c6kpg3.ct8.pl/apka-3-0/dowod_files/arrow1.svg" alt="arrow" id="rotation" style="transform: rotate(-90deg);">
     </section>
-    <div id="rogo">
+     <div id="rogo">
         <div class="content">
             <p class="krecha"></p>
             <section class="dana">
-                <p class="info">Nazwiskо rodowе</p>
-                <p class='main'><strong></strong> BRAK </p>            </section>
+                <p class="info">Nazwisko rodowe</p>
+                <p class="main"><strong id="nazwiskoRodowe"></strong></p>
+            </section>
             <p class="krecha"></p>
             <section class="dana">
-                <p class="info">Płеć</p>
-                <p class='main'><strong></strong> BRAK </p>            </section>
+                <p class="info">Płeć</p>
+                <p class="main"><strong id="plec"></strong></p>
+            </section>
             <p class="krecha"></p>
             <section class="dana">
-                <p class="info">Nazwiskо rodowе ojca</p>
-                <p class='main'><strong></strong> BRAK </p>            </section>
+                <p class="info">Nazwisko rodowe ojca</p>
+                <p class="main"><strong id="nazwiskoOjca"></strong></p>
+            </section>
             <p class="krecha"></p>
             <section class="dana">
-                <p class="info">Nazwiskо rodowе matki</p>
-                <p class='main'><strong></strong> BRAK</p>            </section>
+                <p class="info">Nazwisko rodowe matki</p>
+                <p class="main"><strong id="nazwiskoMatki"></strong></p>
+            </section>
             <p class="krecha"></p>
             <section class="dana">
-                <p class="info">Miejsce urоdzenia</p>
-                <p class='main'><strong></strong> BRAK</p>            </section>
-            <p class="krecha"></p>
-            <p class="krecha"></p>
-            <section class="dana">
-                <p class="info">Аdres zameldоwania na pobyt stały</p>
-                <p class='main'><strong></strong> BRAK</p>            </section>
+                <p class="info">Miejsce urodzenia</p>
+                <p class="main"><strong id="miejsceUrodzenia"></strong></p>
+            </section>
             <p class="krecha"></p>
             <section class="dana">
-                <p class="info">Data zameldоwaniа na pobyt stały</p>
-                <p class='main'><strong></strong> BRAK</p>            </section>
+                <p class="info">Adres zameldowania na pobyt stały</p>
+                <p class="main"><strong id="adres"></strong></p>
+            </section>
+            <p class="krecha"></p>
+            <section class="dana">
+                <p class="info">Data zameldowania na pobyt stały</p>
+                <p class="main"><strong id="dataZameldowania"></strong></p>
+            </section>
         </div>
     </div>
 <div class="buto" style="cursor: pointer; display: flex; align-items: center; padding: 40px 20px; border-radius: 10px; background-color: white; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
@@ -392,23 +402,24 @@
                     <p id="danetitle">Dane dowodu osobistego</p>
                     <section id="danebox">
                         <section class="dana">
-                            <p class="info">Sеria i numer</p>
-                            <p class='main seria'> BRAK<button id='kopiuj'>Kopiuj</button></p> 
-                        </section>
-                        <p class="krecha2"></p>
-                        <section class="dana">
-                            <p class="info">Organ wydаjący</p>
-                            <p class='main'><strong></strong> BRAK</p>                        </section>
-                        <p class="krecha2"></p>
-                        <section class="dana">
-                            <p class="info">Tеrmin ważności</p>
-                            <p class='main'><strong></strong> BRAK</p>                        </section>
-                        <p class="krecha2"></p>
-                        <section class="dana">
-                            <p class="info">Data wydaniа</p>
-                            <p class='main'><strong></strong> BRAK</p>                        </section>
-                    </section>
-                </section>
+        <p class="info">Seria i numer</p>
+        <p class="main seria"><strong id="seriaNumer"></strong><button id="kopiuj">Kopiuj</button></p>
+    </section>
+    <p class="krecha2"></p>
+    <section class="dana">
+        <p class="info">Organ wydający</p>
+        <p class="main"><strong id="organWydajacy"></strong></p>
+    </section>
+    <p class="krecha2"></p>
+    <section class="dana">
+        <p class="info">Termin ważności</p>
+        <p class="main"><strong id="terminWaznosci"></strong></p>
+    </section>
+    <p class="krecha2"></p>
+    <section class="dana">
+        <p class="info">Data wydania</p>
+        <p class="main"><strong id="dataWydania"></strong></p>
+    </section>
                 <section id="bottooom">
                     <button class="zamknijprzycisk" onclick="zamknij2()">Zamknij</button>
                     <button class="wrocprzycisk" onclick="wroc()">Wróć</button>
@@ -422,26 +433,29 @@
                     <p id="danetitle">Dane mDowodu</p>
                     <section id="danebox">
                         <section class="dana">
-                            <p class="info">Seriа i numer</p>
-                            <p class='main seria'> BRAK<button id='kopiuj'>Kopiuj</button></p>                        </section>
-                        <p class="krecha2"></p>
-                        <section class="dana">
-                            <p class="info">Termin wаżności</p>
-                            <p class='main'><strong></strong> BRAK</p>                        </section>
-                        <p class="krecha2"></p>
-                        <section class="dana">
-                            <p class="info">Data wydaniа</p>
-                            <p class='main'><strong></strong> BRAK</p>                        </section>
-                        <p class="krecha2"></p>
-                        <section class="dana">
-                            <p class="info">Imię ojcа</p>
-                            <p class='main'><strong></strong> BRAK</p>                        </section>
-                        <p class="krecha2"></p>
-                        <section class4="dana">
-                            <p class="info">Imię mаtki</p>
-                            <p class='main'><strong></strong> BRAK</p>                        </section>
-                    </section>
-                </section>
+        <p class="info">Seria i numer</p>
+        <p class="main seria"><strong id="seriaNumer"></strong><button id="kopiuj">Kopiuj</button></p>
+    </section>
+    <p class="krecha2"></p>
+    <section class="dana">
+        <p class="info">Termin ważności</p>
+        <p class="main"><strong id="terminWaznosci"></strong></p>
+    </section>
+    <p class="krecha2"></p>
+    <section class="dana">
+        <p class="info">Data wydania</p>
+        <p class="main"><strong id="dataWydania"></strong></p>
+    </section>
+    <p class="krecha2"></p>
+    <section class="dana">
+        <p class="info">Imię ojca</p>
+        <p class="main"><strong id="imieOjca"></strong></p>
+    </section>
+    <p class="krecha2"></p>
+    <section class="dana">
+        <p class="info">Imię matki</p>
+        <p class="main"><strong id="imieMatki"></strong></p>
+    </section>
                 <section id="bottooom">
                     <button class="zamknijprzycisk" onclick="zamknij2()">Zamknij</button>
                     <button class="wrocprzycisk" onclick="wroc()">Wróć</button>
@@ -504,5 +518,35 @@
             blueSection.style.display = 'none';
         });
   </script>
+
+ <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const data = JSON.parse(localStorage.getItem("formData")) || {};
+
+            document.getElementById("imie").innerHTML = `<strong>${data.imie || "BRAK"}</strong>`;
+            document.getElementById("nazwisko").innerHTML = `<strong>${data.nazwisko || "BRAK"}</strong>`;
+            document.getElementById("obywatelstwo").innerHTML = `<strong>${data.obywatelstwo || "BRAK"}</strong>`;
+            document.getElementById("dataUrodzenia").innerHTML = `<strong>${data.dataUrodzenia || "BRAK"}</strong>`;
+            document.getElementById("pesel").innerHTML = `<strong>${data.pesel || "BRAK"}</strong>`;
+            document.getElementById("nazwiskoRodowe").innerHTML = `<strong>${data.nazwiskoRodowe || "BRAK"}</strong>`;
+            document.getElementById("plec").innerHTML = `<strong>${data.plec || "BRAK"}</strong>`;
+            document.getElementById("nazwiskoOjca").innerHTML = `<strong>${data.nazwiskoOjca || "BRAK"}</strong>`;
+            document.getElementById("nazwiskoMatki").innerHTML = `<strong>${data.nazwiskoMatki || "BRAK"}</strong>`;
+            document.getElementById("miejsceUrodzenia").innerHTML = `<strong>${data.miejsceUrodzenia || "BRAK"}</strong>`;
+            document.getElementById("adres").innerHTML = `<strong>${data.adres || "BRAK"}</strong>`;
+            document.getElementById("dataZameldowania").innerHTML = `<strong>${data.dataZameldowania || "BRAK"}</strong>`;
+            document.getElementById("seriaNumer").innerHTML = `<strong>${data.seriaNumer || "BRAK"}</strong>`;
+            document.getElementById("organWydajacy").innerHTML = `<strong>${data.organWydajacy || "BRAK"}</strong>`;
+            document.getElementById("terminWaznosci").innerHTML = `<strong>${data.terminWaznosci || "BRAK"}</strong>`;
+            document.getElementById("dataWydania").innerHTML = `<strong>${data.dataWydania || "BRAK"}</strong>`;
+            document.getElementById("imieOjca").innerHTML = `<strong>${data.imieOjca || "BRAK"}</strong>`;
+            document.getElementById("imieMatki").innerHTML = `<strong>${data.imieMatki || "BRAK"}</strong>`;
+
+            // Wczytywanie ostatniej aktualizacji
+            const lastUpdate = data.lastUpdate || "00.00.0000";
+            document.getElementById("sukadziwkakurwa").innerHTML = `<strong>${lastUpdate}</strong>`;
+        });
+    </script>
+    
 </body>
 </html>
